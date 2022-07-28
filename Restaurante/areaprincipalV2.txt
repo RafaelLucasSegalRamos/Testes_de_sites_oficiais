@@ -1,0 +1,12 @@
+<html>
+<head>
+<title> Área principal </title>
+<frameset rows="35%,65%">
+<frame name="titulo" src="titulo.html">
+<frameset cols="*,*">
+<frame name="Menu" src="Opcoes.html">
+<frame name="abal" >
+</head>
+<body bgcolor="black" font="yellow">
+</body>
+</html>

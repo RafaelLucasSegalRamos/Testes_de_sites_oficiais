@@ -1,0 +1,27 @@
+<html>
+<head>
+<title> Burgers' Time - Porções </title>
+</head>
+<body bgcolor="black">
+<font color="yellow">
+<Center>
+<img src="i1/bebidas.jpg" height="400" width="400">
+<h2>Seja bem-vindo à aba de Porções.</h2>
+Cada acompanhamento se adiciona R$2,00
+<br>Abaixo é só clicar na imagem e fazer suas escolhas!
+</center>
+<dl>
+<a href="Pagamento3.html"><img src="ip1/potato.jpg" height="200" width="200"></a>
+Batata Frita..................R$10,00(pequena);12,50(media);15,00(grande)
+<dd>Acompanhamento:Ketchup, Maionese, Mostarda.  
+<dt>
+<a href="Pagamento3.html"><img src="ip1/Alho.jpg" height="200" width="200"></a>
+Pão de Alho..................R$10,00
+<dd>Acompanhamento:ketchup, maionese,mostarda
+<dt>
+<a href="Pagamento3.html"><img src="ip1/potato1.jpg" height="200" width="200"></a>
+Batata Frita com bacon e cheddar..................R$25,00(media),30,00(grande)
+<dd>Acompanhamento:Ketchup, Maionese, Mostarda
+<a href="areaprincipal.html"><h2>Click aqui, para voltar à página principal</a>
+</body>
+</html>
