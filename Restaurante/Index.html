@@ -9,8 +9,36 @@
 </head>
 <body>
     <header>
-        <img src="Logo.jpg" alt="">
+        <img src="CSS/imgs/Logo.jpg" alt="Imagem da Logo" class="logo   ">
         <h2>Bem Vindo ao <span class="ingles">Burguer's Time</span></h2>
     </header>
+    <nav>
+        
+        <a href="#">
+            <div class="icon"><ion-icon name="home-outline"></ion-icon></div>
+            <div class="textBox">Home</div>
+        </a>
+        
+        <a href="#">
+            <div class="icon"><ion-icon name="cart-outline"></ion-icon></div>
+            <div class="textBox">Compras</div>
+        </a>
+        
+        <a href="#">
+            <div class="icon"><ion-icon name="alert-circle-outline"></ion-icon></div>
+            <div class="textBox">Sobre</div>
+        </a>
+    </nav>
+    <script type="text/javascript">
+        const links = document.querySelector('a');
+
+        function activeLink(){
+            links.classList.toggle('active');
+            links.forEach((item) => item.classList.remove('active'));
+        }
+        links.forEach((item) => item.addEventListener('mouseenter', activeLink));
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

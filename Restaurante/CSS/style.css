@@ -5,6 +5,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 :root
@@ -26,17 +27,63 @@ header
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100px;
+    height: 200px;
     background: var(--backgroudh);
-    box-shadow: 10px 0 5px rgba(0, 0, 0, 0.555);
+    z-index: 10;
+    position: fixed;
 }
 
 header h2
 {
     color: yellow;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 header h2 .ingles
 {
     font-style: italic;
 }
+
+header .logo
+{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 0;
+}
+
+nav
+{
+    display: flex;
+    background: #555;
+    box-shadow: 0 0 10px 0 10px rgba(0, 0, 0, 1);
+    position: fixed;
+    top: 200px;
+    width: 100%;
+}
+
+nav a
+{
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+nav a .icon
+{
+    font-size: 25px;
+    margin: 0 30px;
+    transform: scale(1);
+}
+
+nav a .textBox
+{
+    display: none;
+    transform: scale(0);
+    transition: 0.5s;
+}
+
