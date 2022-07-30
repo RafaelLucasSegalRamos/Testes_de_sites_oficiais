@@ -158,6 +158,7 @@ main span
     pointer-events: none;
     background: white;
     animation: animate 5s linear infinite;
+    z-index: -1;
 }
 
 @keyframes animate
@@ -212,6 +213,7 @@ main ul
 {
     padding: 10px;
     display: flex;
+    z-index: 5;
 }
 
 main ul li
@@ -219,6 +221,11 @@ main ul li
     padding: 10px;
     list-style: none;
     position: relative;
+}
+
+main ul li a
+{
+    text-decoration: none;
 }
 
 main ul li .textBox
