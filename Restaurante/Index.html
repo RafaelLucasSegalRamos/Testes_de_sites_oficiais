@@ -13,30 +13,77 @@
         <h2>Bem Vindo ao <span class="ingles">Burguer's Time</span></h2>
     </header>
     <nav>
-        
-        <a href="#">
-            <div class="icon"><ion-icon name="home-outline"></ion-icon></div>
-            <div class="textBox">Home</div>
-        </a>
-        
-        <a href="#">
-            <div class="icon"><ion-icon name="cart-outline"></ion-icon></div>
-            <div class="textBox">Compras</div>
-        </a>
-        
-        <a href="#">
-            <div class="icon"><ion-icon name="alert-circle-outline"></ion-icon></div>
-            <div class="textBox">Sobre</div>
-        </a>
+        <ul>
+            <li class="list">
+                <a href="Index.html">
+                    <div class="icon"><ion-icon name="home-outline" class="icone"></ion-icon></div>
+                    <div class="textBox">Home</div>
+                </a>
+            </li>
+            
+            <li class="list">
+                <a href="Opcoes.html">
+                    <div class="icon"><ion-icon name="cart-outline" class="icone"></ion-icon></div>
+                    <div class="textBox">Compras</div>
+                </a>
+            </li>
+            
+            <li class="list">
+                <a href="#">
+                    <div class="icon"><ion-icon name="alert-circle-outline" class="icone"></ion-icon></div>
+                    <div class="textBox">Sobre</div>
+                </a>
+            </li>
+        </ul>
     </nav>
-    <script type="text/javascript">
-        const links = document.querySelector('a');
 
-        function activeLink(){
-            links.classList.toggle('active');
-            links.forEach((item) => item.classList.remove('active'));
+    <main>
+
+    </main>
+
+    <footer>
+        <p>Site Criado por <a href="https://github.com/RafaelLucasSegalRamos">Rafael Lucas</a> para um trabalho no Armando Bayeux</p>
+    </footer>
+    <script type="text/javascript">
+
+        const colors = [
+            '#2196f3',
+            '#e91e63',
+            '#ffeb3b',
+            '#74ff1d'
+        ]
+
+        function createSquare(){
+            const main = document.querySelector("main");
+            const square = document.createElement('span');
+
+            var size = Math.random() * 50;
+            
+            square.style.width = 20+size +'px';
+            square.style.height = 20+size +'px';
+
+            square.style.top = Math.random() * innerHeight + 'px';
+            square.style.left = Math.random() * innerWidth + 'px';
+
+            const bg = colors[Math.floor(Math.random() * colors.length)];
+            square.style.background = bg; 
+            
+            main.appendChild(square);
+        
+            setTimeout(() => {
+                square.remove()
+            }, 5000)
         }
-        links.forEach((item) => item.addEventListener('mouseenter', activeLink));
+
+        setInterval(createSquare, 150)
+    </script>
+    <script>
+        const list = document.querySelectorAll('.list');
+        function activeLink(){
+            list.forEach((item) => item.classList.remove('active'));
+            this.classList.add('active');
+        }
+        list.forEach((item) => item.addEventListener('mouseenter', activeLink));
     </script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

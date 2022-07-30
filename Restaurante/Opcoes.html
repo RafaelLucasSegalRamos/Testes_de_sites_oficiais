@@ -1,15 +1,113 @@
-<html>
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
-<title> Menu </title>
-<base target="abal">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Pagina Principal</title>
 </head>
-<body bgcolor="black">
-<font color="yellow">
-<h2>Lista de Abas para compras</h2>
-<ol>
-<li><a href="abalanche.html">Lanches</a>
-<li><a href="ababebidas.html">Bebidas</a>
-<li><a href="abaporcoes.html">Acompanhamentos</a>
-</ol>
+<body>
+    <header>
+        <img src="CSS/imgs/Logo.jpg" alt="Imagem da Logo" class="logo   ">
+        <h2>Bem Vindo à aba de opções</h2>
+    </header>
+    <nav>
+        <ul>
+            <li class="list">
+                <a href="Index.html">
+                    <div class="icon"><ion-icon name="home-outline" class="icone"></ion-icon></div>
+                    <div class="textBox">Home</div>
+                </a>
+            </li>
+            
+            <li class="list">
+                <a href="Opcoes.html">
+                    <div class="icon"><ion-icon name="cart-outline" class="icone"></ion-icon></div>
+                    <div class="textBox">Compras</div>
+                </a>
+            </li>
+            
+            <li class="list">
+                <a href="#">
+                    <div class="icon"><ion-icon name="alert-circle-outline" class="icone"></ion-icon></div>
+                    <div class="textBox">Sobre</div>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Opções de Compra:</h1>
+        <ul>
+            <li>
+                <div class="textBox">
+                    <h2>Hamburgueres</h2>
+                </div>
+                <div class="imgBox"><img src="CSS/imgs/lanches.jpg"></div>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <div class="textBox">
+                    <h2>Bebidas</h2>
+                </div>
+                <div class="imgBox"><img src="CSS/imgs/bebidas.jpg"></div>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <div class="textBox">
+                    <h2>Acompanhamentos</h2>
+                </div>
+                <div class="imgBox"><img src="CSS/imgs/Porcoes.jpg" alt=""></div>
+            </li>
+        </ul>
+    </main>
+    <footer>
+        <p>Site Criado por <a href="https://github.com/RafaelLucasSegalRamos">Rafael Lucas</a> para um trabalho no Armando Bayeux</p>
+    </footer>
+    <script type="text/javascript">
+
+        const colors = [
+            '#2196f3',
+            '#e91e63',
+            '#ffeb3b',
+            '#74ff1d'
+        ]
+
+        function createSquare(){
+            const main = document.querySelector("main");
+            const square = document.createElement('span');
+
+            var size = Math.random() * 50;
+            
+            square.style.width = 20+size +'px';
+            square.style.height = 20+size +'px';
+
+            square.style.top = Math.random() * innerHeight + 'px';
+            square.style.left = Math.random() * innerWidth + 'px';
+
+            const bg = colors[Math.floor(Math.random() * colors.length)];
+            square.style.background = bg; 
+            
+            main.appendChild(square);
+        
+            setTimeout(() => {
+                square.remove()
+            }, 5000)
+        }
+
+        setInterval(createSquare, 150)
+    </script>
+    <script>
+        const list = document.querySelectorAll('.list');
+        function activeLink(){
+            list.forEach((item) => item.classList.remove('active'));
+            this.classList.add('active');
+        }
+        list.forEach((item) => item.addEventListener('mouseenter', activeLink));
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
