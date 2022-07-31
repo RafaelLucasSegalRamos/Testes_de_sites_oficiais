@@ -269,6 +269,18 @@ main section ul.product li a img
     height: 200px;
 }
 
+main section ul.product p
+{
+    padding: 0px 30px;
+}
+
+main section ul.product li .textBox1
+{
+    display: block;
+    flex-direction: row;
+    height: 100%;
+}
+
 main ul li a
 {
     text-decoration: none;
@@ -309,11 +321,6 @@ main section ul li
     color: yellow;
     font-size: 1.5em;
     display: flex;
-}
-
-main section ul li p
-{
-    text-align: justify;
 }
 
 footer
